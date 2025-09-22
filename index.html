@@ -1,0 +1,216 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Konathala Pujesh Kumar — Portfolio</title>
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --accent:#06b6d4; /* teal */
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      --radius:14px;
+      --max:1000px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:linear-gradient(180deg,var(--bg), #071022 120%);
+      color:#e6eef6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      line-height:1.5; padding:40px 20px; display:flex; justify-content:center; align-items:flex-start;
+      font-size:16px;
+    }.container{
+  width:100%; max-width:var(--max); display:grid; grid-template-columns:320px 1fr; gap:28px;
+}
+
+/* SIDEBAR */
+.sidebar{
+  background:linear-gradient(180deg,var(--card), rgba(11,18,32,0.6)); border-radius:var(--radius);
+  padding:28px; box-shadow: 0 6px 30px rgba(2,6,23,0.6); position:sticky; top:40px; height:fit-content; overflow:hidden;
+  border:1px solid var(--glass-2);
+}
+.avatar{
+  width:110px; height:110px; border-radius:18px; background:linear-gradient(135deg,var(--accent),#7c3aed 60%);
+  display:flex; align-items:center; justify-content:center; font-weight:700; font-size:28px; color:#041322; margin-bottom:18px;
+  transform:rotate(-6deg); box-shadow: 0 10px 30px rgba(3,6,15,0.6);
+}
+h1.name{font-size:20px;margin:0 0 6px}
+.title{color:var(--muted);font-size:13px;margin:0 0 12px}
+.contact{font-size:13px; color:#cfefff; margin-top:6px}
+.contact a{color:var(--accent); text-decoration:none}
+
+.section{margin-top:18px}
+.section h3{font-size:13px;margin:0 0 10px; text-transform:uppercase; letter-spacing:1px; color:var(--muted)}
+.pill{display:inline-block;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,0.03); margin:6px 6px 6px 0; font-size:13px}
+
+/* MAIN */
+.main{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius);
+  padding:32px; box-shadow: 0 6px 40px rgba(2,6,23,0.6); border:1px solid var(--glass);
+  min-height:400px;
+}
+
+.hero{
+  display:flex; justify-content:space-between; gap:16px; align-items:flex-start;
+}
+.objective{max-width:70%}
+.objective h2{margin:0;font-size:20px}
+.objective p{color:var(--muted); margin-top:8px}
+
+.cta{display:flex; gap:12px; align-items:center}
+.btn{background:transparent;border:1px solid rgba(255,255,255,0.06); padding:10px 14px;border-radius:10px; cursor:pointer; font-weight:600}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#7c3aed); color:#041322; border:none}
+
+/* timeline / lists */
+.grid-2{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:20px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent); padding:18px; border-radius:12px; border:1px solid var(--glass-2)}
+.card h4{margin:0 0 8px}
+ul{padding-left:18px;margin:0}
+li{margin-bottom:8px; color:var(--muted)}
+
+/* footer info */
+.footer{margin-top:20px; color:var(--muted); font-size:13px}
+
+/* animations */
+.fade-up{opacity:0; transform:translateY(18px); animation:fadeUp .7s ease forwards}
+.stagger-1{animation-delay:.08s}
+.stagger-2{animation-delay:.16s}
+.stagger-3{animation-delay:.24s}
+.stagger-4{animation-delay:.32s}
+@keyframes fadeUp{to{opacity:1; transform:translateY(0)}}
+
+/* scroll reveal small JS fallback uses .reveal class */
+.reveal{opacity:0; transform:translateY(12px); transition:all .6s ease}
+.reveal.visible{opacity:1; transform:translateY(0)}
+
+/* responsive */
+@media (max-width:880px){
+  .container{grid-template-columns:1fr;}
+  .avatar{margin:auto}
+  .hero{flex-direction:column}
+  .objective{max-width:100%}
+  .grid-2{grid-template-columns:1fr}
+}
+
+/* small niceties */
+a.link{color:var(--accent); text-decoration:none}
+.meta{color:var(--muted); font-size:13px}
+.skill{display:flex; gap:8px; flex-wrap:wrap}
+.skill .pill{background:transparent;border:1px solid rgba(255,255,255,0.03)}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar reveal">
+      <div class="avatar">PK</div>
+      <h1 class="name">Konathala Pujesh Kumar</h1>
+      <div class="title">BCA Student • Python & Web</div><div class="section">
+    <h3>Contact</h3>
+    <div class="contact">PH: 6301568789<br><a href="mailto:pujeshkumarkonathala23@gmail.com">pujeshkumarkonathala23@gmail.com</a></div>
+  </div>
+
+  <div class="section">
+    <h3>Hobbies</h3>
+    <div class="meta">Reading · Learning new things · Time management · Graphic design · Leadership</div>
+  </div>
+
+  <div class="section">
+    <h3>Personal</h3>
+    <div class="meta">Konathala pujeshkumar<br>Rama Chandra rao<br>26<sup>th</sup> Aug 2006<br>Telugu · Unmarried</div>
+  </div>
+
+  <div class="section">
+    <h3>Quick Links</h3>
+    <div class="pill"><a class="link" href="#education">Education</a></div>
+    <div class="pill"><a class="link" href="#skills">Skills</a></div>
+    <div class="pill"><a class="link" href="#projects">Certificates</a></div>
+  </div>
+</aside>
+
+<main class="main">
+  <div class="hero">
+    <div class="objective">
+      <h2 class="reveal stagger-1">Carrier Objective</h2>
+      <p class="reveal stagger-2">Seeking an opportunity to work in a challenging environment in order to prove my skills and utilize my knowledge and intelligence for the growth of the organization.</p>
+    </div>
+    <div class="cta reveal stagger-3">
+      <button class="btn">Download CV</button>
+      <button class="btn primary">Contact</button>
+    </div>
+  </div>
+
+  <div id="education" class="grid-2">
+    <div class="card reveal stagger-1">
+      <h4>Educational Qualification</h4>
+      <ul>
+        <li><strong>Studying:</strong> BCA (Bachelor of Computer Applications) — Aditya Degree College, Eluru.</li>
+        <li><strong>Intermediate:</strong> NRI Junior College, Eluru — 80% (2021–2023).</li>
+        <li><strong>SSC:</strong> ZPHS Polavaram — 6.6 CGPA.</li>
+      </ul>
+    </div>
+
+    <div class="card reveal stagger-2">
+      <h4 id="skills">Technical skills</h4>
+      <div class="skill">
+        <span class="pill">Python</span>
+        <span class="pill">HTML</span>
+        <span class="pill">SQL</span>
+        <span class="pill">MS Office</span>
+        <span class="pill">Windows</span>
+      </div>
+
+      <h4 style="margin-top:14px">Certificates & Internship</h4>
+      <ul>
+        <li>Python</li>
+        <li>Person Mepro (assumed)</li>
+        <li>Azure</li>
+        <li>Hackathon participant</li>
+        <li>Internship on Microsoft Azure</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="projects" class="card reveal stagger-3" style="margin-top:18px">
+    <h4>Projects & Activities</h4>
+    <p class="meta">(Use this section to list any projects, GitHub links or practical work. Example entries below.)</p>
+    <ul>
+      <li>Azure internship work — cloud basics and small deployments.</li>
+      <li>Hackathon — teamwork, prototyping and quick deployment.</li>
+    </ul>
+  </div>
+
+  <div class="card reveal stagger-4" style="margin-top:18px">
+    <h4>Declaration</h4>
+    <p class="meta">I hereby declare that the above information is true to the best of my knowledge and belief.</p>
+  </div>
+
+  <div class="footer">
+    <p>Want this as a downloadable PDF, a multi-page portfolio, or a React component? Tell me which and I’ll prepare it.</p>
+  </div>
+</main>
+
+  </div>  <script>
+    // Simple scroll reveal
+    function revealOnScroll(){
+      document.querySelectorAll('.reveal').forEach(el =>{
+        const r = el.getBoundingClientRect();
+        if(r.top < (window.innerHeight - 60)) el.classList.add('visible');
+      })
+    }
+    // initial small staggered animation
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('.stagger-1, .stagger-2, .stagger-3, .stagger-4').forEach(el=>{
+        // convert .stagger-N into CSS fade-up animations
+        el.classList.add('fade-up');
+      });
+      revealOnScroll();
+      window.addEventListener('scroll', revealOnScroll);
+    });
+  </script></body>
+</html>
